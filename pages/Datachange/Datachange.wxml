@@ -1,0 +1,124 @@
+<!--index.wxml-->
+  <!-- <view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>   -->
+
+
+
+<view>
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      
+
+     
+
+      <view class="page-section page-section-gap">
+        <view style="left: 19rpx; top: 19rpx; width: 750rpx; height: 95rpx; display: block; box-sizing: content-box; font-size: 30px; font-style: initial; text-align: -webkit-center; color: bla">    数据修改 </view>
+        <radio-group name="radio"  bindchange = "bindData" style="text-align: -webkit-center">
+          <label style="text-align: -webkit-center; margin-right: 10px"><checkbox value="宣传部"/>宣传部</label> 
+          <label style="text-align: -webkit-center; margin-right: 10px"><checkbox value="技术部"/>技术部</label>
+          <label style="text-align: -webkit-center; margin-right: 10px"><checkbox value="办公室部"/>办公室部</label>
+          <label><checkbox value="组织部"/>组织部</label>
+        </radio-group>
+      </view>
+       
+
+        <view class="view-contain-ti">
+          <text class="text-ti">姓名</text>
+          <input class="input1"bindblur="handeName"></input>
+        </view>
+        <view class="view-contain-ti">
+    <text class="text-ti">学院</text>
+    <input class="input1"bindblur="handeCollage"></input>
+</view>
+<view class="view-contain-ti">
+          <text class="text-ti">学号</text>
+          <input class="input1"bindblur="handeId"></input>
+        </view>
+        <view class="view-contain-ti">
+          <text class="text-ti">班级</text>
+          <input class="input1"bindblur="handeClass"></input>
+        </view>
+<!-- 
+    <text style = "font-size: 20px"> </text>
+    <input style="margin: 10rpx 0" type="text"  placeholder="点击输入" ></input>
+  </view>
+
+
+  <view>
+    <text style = "font-size: 20px"></text>
+    <input type="text" placeholder="点击输入" ></input>
+
+  </view>
+  <view>
+    <text style = "font-size: 20px"></text>
+    <input type="text" placeholder="点击输入" ></input>
+
+  </view>
+
+  <view>
+    <text  style = "font-size: 20px">班级</text>
+    <input type="text" placeholder="点击输入" bindblur="handeClass"></input>
+
+  </view> -->
+
+      
+      
+      <view  >
+        <button  type="primary" bindtap="handadd">提交</button>
+        <button   bindtap="changeFalse" formType="reset">清除</button>
+      </view>
+    </form>
+  </view>
+
+</view>
+
+
+
+<!-- 
+<Text>报名表的填写</Text>
+<view>--------------</view>
+<view>
+  <view>
+    <text> 姓名</text>
+    <input type="text"  placeholder="点击输入" bindblur="handeName"></input>
+  </view>
+
+
+  <view>
+    <text>班级</text>
+    <input type="text" placeholder="点击输入" bindblur="handeClass"></input>
+
+  </view>
+
+  <button size="mini" ploin type="primary" bindtap="handadd" >
+
+  数据提交
+  </button>
+
+  <button size="max" type="primary" bindtap = "getUserData">查询数据</button>
+
+  
+
+
+</view> -->
+

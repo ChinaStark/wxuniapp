@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/resg/resg",
+    "pages/index/index",
+    "pages/Datachange/Datachange",
+    "pages/person/person",
+    "pages/logs/logs",
+    "pages/stu/stu"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#DB7093",
+    "navigationBarTitleText": "计算机竞技协会",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ffff00",
+    "enablePullDownRefresh": true,
+    "backgroundColorTop": "grey"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/resg/resg",
+        "text": "首页",
+        "iconPath": "img/p1_1.png",
+        "selectedIconPath": "img/p1.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人",
+        "iconPath": "img/person.png",
+        "selectedIconPath": "img/person_1.png"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#DB7093",
+    "backgroundColor": "#ffffff"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

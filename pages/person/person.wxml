@@ -1,0 +1,47 @@
+<!--pages/demo02/demo02.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay interval="{{2000}}" style = "width=100%"  indicator-color="#0094ff" indicator-active-color="#ff0094" duration="{{1000}}">
+  <block wx:for="{{imgUrls}}" wx:key = "*this">
+    <swiper-item>
+      <image mode ="center" src="{{item}}" />
+    </swiper-item>
+  </block>
+</swiper>
+<view>
+  <view>
+    <text> 姓名 : </text>
+    <text>{{StuName}}</text>
+  </view>
+
+
+  <view>
+    <text>学院 : </text>
+    <text>{{Sed_collage}}</text>
+    
+
+  </view>
+  <view>
+    <text>班级 : </text>
+    <text>{{ClassName}}</text>
+    
+
+  </view>
+  <view>
+    <text>部门 : </text>
+    <text>{{deparment}}</text>
+    
+
+  </view>
+  <view>
+    <text>学号 : </text>
+    <text>{{stuid}}</text>
+    
+
+  </view>
+
+  <navigator url="../Datachange/Datachange">
+    <button size="mini" ploin type="primary"  >
+
+      数据修改
+  </button></navigator>
+  
+</view>

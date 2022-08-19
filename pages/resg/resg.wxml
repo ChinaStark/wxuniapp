@@ -1,0 +1,16 @@
+<!--pages/demo03/demo03.wxml-->
+
+   
+<view class="retange" bindtap = "resiger"> 
+
+  点击注册
+</view>
+
+ <text></text>
+<view wx:if="{{isShow}}" class="retange" bindtap = "serach"> 
+
+数据查询
+</view>
+<!-- <view class="retange" > 点击注册</view> -->
+
+  
