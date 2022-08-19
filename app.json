@@ -1,11 +1,14 @@
 {
   "pages": [
+    
     "pages/resg/resg",
     "pages/index/index",
     "pages/Datachange/Datachange",
     "pages/person/person",
     "pages/logs/logs",
-    "pages/stu/stu"
+    "pages/stu/stu",
+    "pages/login/login"
+    
   ],
   "window": {
     "backgroundTextStyle": "dark",

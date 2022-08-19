@@ -10,6 +10,7 @@ let stuId = ''
 let adjust = ''
 let depart =  ''
 let per = ''
+let pwd = ''
 const app = getApp()
 const db = wx.cloud.database().collection('applicationForm')
 Page({
@@ -68,9 +69,13 @@ Page({
     Class = event.detail.value
     logo++
   },
+  onPullDownRefresh: function () {
+    this.onLoad()
+},
   handadd(){
      
     if(logo > 1){
+      console.log(app.userInfo.ClassName)
       db.doc(app.userInfo.id).update({
         data:{
           StuName : Name,
@@ -78,9 +83,10 @@ Page({
           Sed_CollageName : CollageName,
           deparment : depart,
           stu_Id : stuId,
-          permisson : 0,
+          permisson : per,
           status : 1,
           adjust : switchAllChecked,
+          pwd : pwd
         },
         success(res){
           wx.showToast({
@@ -114,22 +120,9 @@ Page({
       CollageName = app.userInfo.Sed_CollageName
       stuId = app.userInfo.stu_Id,
       per = app.userInfo.permisson
-    
+      pwd = app.userInfo.pwd
   }
   ,
-  getUserData(){
-    let  _this = this;
-    db.where({
-      _openid : 'oouPS4otSJgVZYDmc2_i_-4ygvYs'
-    }).get({
-      success : res => {
-        this.setData({
-          UserName:res.data[0].StuName
-        })
-        
-      }
-    })
-  },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({

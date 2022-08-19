@@ -1,16 +1,11 @@
-// pages/dmeo04/demo04.js
-
-
-const db = wx.cloud.database().collection("applicationForm")
-let datas = ''
-const app = getApp()
+// pages/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    studata:[]
+
   },
 
   /**
@@ -18,24 +13,6 @@ Page({
    */
   onLoad: function (options) {
 
-    let _this = this
-    
-    db.where({
-      deparment : app.userInfo.deparment
-    }).get({
-      success : res => {
-        
-        let datas = res.data
-        _this.setData({
-          studata : datas
-        })
-        
-    }
-    
-  })
-  
-  
-  
   },
 
   /**
@@ -70,7 +47,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-      this.onLoad()
+
   },
 
   /**

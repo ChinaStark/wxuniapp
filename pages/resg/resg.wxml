@@ -1,5 +1,5 @@
 <!--pages/demo03/demo03.wxml-->
-
+<!-- 
    
 <view class="retange" bindtap = "resiger"> 
 
@@ -10,7 +10,41 @@
 <view wx:if="{{isShow}}" class="retange" bindtap = "serach"> 
 
 数据查询
-</view>
+</view> -->
 <!-- <view class="retange" > 点击注册</view> -->
 
-  
+<!--pages/forview/forview.wxml-->
+<view class="section">
+  <view  class="tui-table-view">
+    <view class="tui-col-3">
+      <view bindtap = "serach" >数据查询</view>
+    </view>
+    <view bindtap = "resiger" class="tui-col-3">
+      <view>用户注册</view>
+    </view>
+    <view class="tui-col-3"  bindtap="loginself">
+      <view>用户登陆</view>
+    </view>
+    <view class="tui-col-3" bindtap="fun" >
+      <view >功能一</view>
+    </view>
+    <view class="tui-col-3"  bindtap="fun">
+      
+      <view>功能二</view>
+    </view>
+    <view class="tui-col-3"  bindtap="fun">
+      
+      <view>功能三</view>
+    </view>
+    <view class="tui-col-3"  bindtap="fun">
+      
+      <view>功能四</view>
+    </view>
+    <view class="tui-col-3"  bindtap="fun">
+      <view>about</view>
+    </view>
+    <view class="tui-col-3"  bindtap="fun">
+      <view>更多</view>
+    </view>
+  </view>
+</view>

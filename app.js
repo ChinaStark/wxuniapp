@@ -1,6 +1,6 @@
 // app.js
 
- 
+
 const utils= require('./utils/util')
 wx.cloud.init()
 const db = wx.cloud.database().collection("applicationForm")
@@ -13,43 +13,16 @@ App({
 
     // 登录
     wx.login({
+      
       success: res => {
-        let _code = res.code
-        let _this= this
-        
-          wx.request({
-
-            url: 'https://api.weixin.qq.com/sns/jscode2session',  
-          
-            data: {
-          
-              appid: 'wx1b24912398143220' , 
-          
-              secret: '7608b71fb1e92a9e425ad2963bf138ca',
-               
-              js_code:_code
-             }, 
-          
-            header: { 
-          
-              'content-type': 'application/json'
-          
-            }, 
-          
-            success: function(res) { 
-              _this.userInfo.openid  = res.data.openid;
-              console.log(res.data) 
-          
-            }
-          
-          })
-
-       
-        db.where({
-          _openid : _this.userInfo.openid
+        let _this = this
+        db.where({    
+           StuName : this.userInfo.StuName,
+           pwd : this.userInfo.pwd
         }).get({
         success : res => {
            
+          
           _this.userInfo.id = res.data[0]._id    
           _this.userInfo.StuName = res.data[0].StuName       
           _this.userInfo.ClassName = res.data[0].ClassName     
@@ -59,11 +32,16 @@ App({
           _this.userInfo.permisson = res.data[0].permisson      
           _this.userInfo.status = res.data[0].status        
           _this.userInfo.adjust = res.data[0].adjust
-
-        
+          console.log('succes')
+        if(_this.userInfo.StuName !== ''){
+           
+          _this.userInfo.loginistrue = 1
+        }
       }
+      
     })
-        
+    
+    console.log(this.userInfo)
       
       },
       
@@ -75,7 +53,8 @@ App({
     })
   },
   globalData: {
-    
+     password : '',
+     name : ''
   },
   userInfo: {
     id              : '',
@@ -88,6 +67,8 @@ App({
     permisson       : '',
     status          : '',
     adjust          : '',
+    pwd             : '',
+    loginistrue     : '',
   },
     
 })

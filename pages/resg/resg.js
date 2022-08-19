@@ -1,7 +1,6 @@
 // pages/demo03/demo03.js
 const app = getApp();
-
-const db = wx.cloud.database().collection("applicationForm")
+ 
 Page({
 
   data:{
@@ -15,18 +14,19 @@ Page({
   onLoad: function () {
      let _this = this
    // console.log(app.userInfo)
-   setTimeout(function () {
-    console.log(app.userInfo.permisson)
-    if(app.userInfo.permisson !== 1){
-      _this.setData({
-        isShow :false 
-      })
-    }else{
-        _this.setData({
-        isShow :true 
-      })
-    }
-  }, 1000) //延迟时间 这里是1秒
+   
+    console.log(app.userInfo)
+  //   setTimeout(function () {
+  //   if(app.userInfo.permisson !== 1){
+  //     _this.setData({
+  //       isShow :false 
+  //     })
+  //   }else{
+  //       _this.setData({
+  //       isShow :true 
+  //     })
+  //   }
+  // }, 1000) //延迟时间 这里是1秒
     
   },  
   resiger(){
@@ -45,13 +45,49 @@ Page({
     
   },
   serach(){
-    wx.navigateTo({
+    if(app.userInfo.permisson === 1){
+      wx.navigateTo({
       url: '../stu/stu',
     })
+    }else{
+      wx.showModal({
+        confirmColor:'red',
+        cancelColor: 'green',
+        title :'警告',
+        title: '你还不是社团干部',
+         
+      })
+    }
+    
+    
+  },
+  loginself(){
+    console.log(app.userInfo.StuName)
+    if(app.userInfo.loginistrue === 1){
+      wx.showModal({
+        confirmColor:'red',
+        cancelColor: 'green',
+        title :'警告',
+        content:'亲爱的'+app.userInfo.StuName+'你已经登陆过了'
+      })
+    }else{
+      wx.navigateTo({
+      url: '../login/login',
+    })
+    }
+    
     
   },
   onShow(){
-  app.onLaunch();
+   
+},
+fun(){
+  wx.showToast({
+    title: '暂未开放，期待你的加入',
+    icon: 'loading',
+    duration: 1500
+  })
 }
+
 })
 

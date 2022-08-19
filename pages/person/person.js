@@ -60,8 +60,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
-  },
+    this.onLoad()
+},
 
   /**
    * 页面上拉触底事件的处理函数
@@ -76,7 +76,20 @@ Page({
   onShareAppMessage: function () {
 
   },
-  
-   
+  jump(){
+    if(app.userInfo.ClassName !== ''){
+      wx.navigateTo({
+        url: '../Datachange/Datachange',
+      })
+    }else{
+      wx.showModal({
+        confirmColor:'red',
+        cancelColor: 'green',
+        title :'警告',
+        title: '你未登录',
+         
+      })
+    }
+  }
 })
 

@@ -1,0 +1,32 @@
+<!--pages/login.wxml-->
+<view class="container" style="width: 696rpx; height: 500rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx"> 
+ 
+ <view class="login-icon"> 
+   <image class="login-img" src="https://636c-cloud1-5gny5k5k1dae764d-1309966458.tcb.qcloud.la/1%20(9).jpg?sign=584e02f4e1437e98a42b69429edfe359&t=1660885787" style="width: 618rpx; height: 435rpx; display: inline-block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></image> 
+ </view> 
+ <view class="login-from"> 
+
+   <!--账号-->
+   <view class="inputView"> 
+
+     <label class="loginLab">账号</label> 
+     <input class="inputText" placeholder="请输入账号" bindinput="phoneInput" /> 
+   </view> 
+   <view class="line"></view> 
+   <!--密码-->
+   <view class="inputView"> 
+     
+     <label class="loginLab">密码</label> 
+     <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" /> 
+   </view> 
+   <!--按钮-->
+   <view class="loginBtnView"> 
+     <button class="loginBtn" type="primary" size="{{primarySize}}" 
+         loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login" style="position: relative; left: 10rpx; top: 28rpx">登录</button> 
+   </view>
+   
+
+ </view> 
+
+</view>
+ 

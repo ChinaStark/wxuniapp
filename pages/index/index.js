@@ -7,7 +7,7 @@ let CollageName =''
 let stuId = ''
 let adjust = ''
 let depart =  ''
- 
+let pwddd = ''
 const db = wx.cloud.database().collection("applicationForm")
 Page({
 
@@ -58,19 +58,15 @@ Page({
     
   
   },
+  handpwd(e){
+    pwddd = e.detail.value
+  },
   handeClass(event){
     Class = event.detail.value
   },
   handadd(){
-    if(Name !== '' && Class !== '' &&CollageName!== '' &&depart!== '' &&stuId!== ''){
-      if(!switchAllChecked){
-        wx.showModal({
-          confirmColor:'red',
-          cancelColor: 'green',
-          title :'提示',
-          content:'确定不调剂吗'
-        })
-      }
+    if(Name !== '' && Class !== '' &&CollageName!== '' &&depart!== '' &&stuId!== '' && pwddd !== ''){
+       
       db.add({
         data:{
           StuName : Name,
@@ -81,6 +77,7 @@ Page({
           permisson : 0,
           status : 1,
           adjust : switchAllChecked,
+          pwd : pwddd
         },
         success(res){
           wx.showToast({
@@ -109,6 +106,9 @@ Page({
     
     
   },
+  onPullDownRefresh: function () {
+    this.onLoad()
+},
   getUserData(){
     let  _this = this;
     db.where({
@@ -122,6 +122,7 @@ Page({
       }
     })
   },
+   
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({

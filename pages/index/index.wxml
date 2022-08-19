@@ -60,6 +60,11 @@
           <input class="input1"bindblur="handeClass"></input>
         </view>
 
+        <view class="view-contain-ti">
+          <text class="text-ti">--密码--</text>
+          <input class="input1"bindblur="handpwd"></input>
+        </view>
+
 
 
     

@@ -1,13 +1,13 @@
 <!--pages/demo02/demo02.wxml-->
-<swiper indicator-dots="{{indicatorDots}}" autoplay interval="{{2000}}" style = "width=100%"  indicator-color="#0094ff" indicator-active-color="#ff0094" duration="{{1000}}">
+<swiper indicator-dots="{{indicatorDots}}" autoplay interval="{{3000}}" style = "width=100%"  >
   <block wx:for="{{imgUrls}}" wx:key = "*this">
     <swiper-item>
-      <image mode ="center" src="{{item}}" />
+      <image style="width: 750rpx; height: 278rpx; display: inline-block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"  mode ="scaleToFill" src="{{item}}" />
     </swiper-item>
   </block>
 </swiper>
-<view>
-  <view>
+<view class="text">
+  <view class="text" >
     <text> 姓名 : </text>
     <text>{{StuName}}</text>
   </view>
@@ -38,10 +38,10 @@
 
   </view>
 
-  <navigator url="../Datachange/Datachange">
-    <button size="mini" ploin type="primary"  >
+   
+    <button  size="mini" ploin type="primary"   style="position: relative; left: -1rpx; top: 122rpx; width: 408rpx; height: 91rpx; display: inline-block; box-sizing: border-box">
 
-      数据修改
-  </button></navigator>
+      <text class="id" bindtap="jump" >数据修改</text>
+  </button> 
   
 </view>

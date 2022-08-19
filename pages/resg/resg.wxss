@@ -26,3 +26,24 @@ rich-text{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+.tui-table-view{
+  background-color: rgb(255, 255, 255);
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.tui-col-3{
+ flex: 0 0 auto;
+  width: 33.33333333%;
+  border-color: black;
+  border-width: 10px;
+  text-align: center;
+  color: rgb(194, 91, 108);
+  padding:60rpx 0;
+  font-size: 30rpx;
+  background-color:rgb(245, 233, 239);
+}
