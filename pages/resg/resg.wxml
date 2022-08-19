@@ -19,18 +19,15 @@
     <view class="tui-col-3">
       <view bindtap = "serach" >数据查询</view>
     </view>
-    <view bindtap = "resiger" class="tui-col-3">
-      <view>用户注册</view>
-    </view>
     <view class="tui-col-3"  bindtap="loginself">
       <view>用户登陆</view>
     </view>
-    <view class="tui-col-3" bindtap="fun" >
-      <view >功能一</view>
+    <view bindtap = "fun" class="tui-col-3">
+      <view>功能一</view>
     </view>
-    <view class="tui-col-3"  bindtap="fun">
-      
-      <view>功能二</view>
+    
+    <view class="tui-col-3" bindtap="fun" >
+      <view >功能二</view>
     </view>
     <view class="tui-col-3"  bindtap="fun">
       
@@ -39,6 +36,10 @@
     <view class="tui-col-3"  bindtap="fun">
       
       <view>功能四</view>
+    </view>
+    <view class="tui-col-3"  bindtap="fun">
+      
+      <view>功能五</view>
     </view>
     <view class="tui-col-3"  bindtap="fun">
       <view>about</view>
