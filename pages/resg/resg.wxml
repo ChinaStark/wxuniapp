@@ -22,8 +22,8 @@
     <view class="tui-col-3"  bindtap="loginself">
       <view>用户登陆</view>
     </view>
-    <view bindtap = "fun" class="tui-col-3">
-      <view>功能一</view>
+    <view bindtap = "changePwd" class="tui-col-3">
+      <view>密码修改</view>
     </view>
     
     <view class="tui-col-3" bindtap="fun" >
@@ -48,4 +48,9 @@
       <view>更多</view>
     </view>
   </view>
+</view>
+
+<view>
+<text class="text">初始密码是123456，首次登陆请尽快修改密码
+</text>
 </view>

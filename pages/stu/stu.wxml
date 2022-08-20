@@ -1,13 +1,33 @@
 <!--pages/dmeo04/demo04.wxml-->
-<view>
+ 
 
-<text >部门成员</text>
+<view style="margin-top:50px; font-size: large; font-weight: 1000; text-align:center;">计协部门成员</view>
 
-<view wx:for="{{studata}}">
-  
-  <text>NO.{{index+1}}：{{item.StuName}}  {{item.ClassName}} {{item.Sed_CollageName}}学院 {{item.deparment}} </text>
+<scroll-view class="table" scroll-x="true">
+    <!-- 表头(即第一行) -->
+    <view class="tr">
+        <view class="th_1">序号</view>
+        <view class="th_2">姓名</view>
+        <view class="th_3">部门</view>
+        <view class="th_4">班级</view>
+        
+    
+    </view>
+    <view wx:for="{{studata}}">
+      <view class="tr">
+        <view class="td_1">{{index+1}}</view>
+        <view class="td_2">{{item.StuName}}</view>
+        <view class="td_3">{{item.deparment}}</view>
+        <view class="td_4">{{item.ClassName}}</view>
+         
+        
+        
+      </view>
 
-
-  </view>
-
-</view>
+    
+    
+    
+    
+    </view>
+    
+</scroll-view>

@@ -47,3 +47,11 @@ rich-text{
   font-size: 30rpx;
   background-color:rgb(245, 233, 239);
 }
+
+.text{
+  font-size: larger;
+  text-align: center;
+  color: pink;
+   vertical-align: middle;
+  margin-bottom: 200px ;
+}

@@ -111,6 +111,9 @@ Page({
       })
     }
   },
+  onShow(){
+    this.onLoad()
+  },
   onLoad(){
     
       Name = app.userInfo.StuName,

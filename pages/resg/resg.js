@@ -61,6 +61,21 @@ Page({
     
     
   },
+  changePwd(){
+
+    if(app.userInfo.StuName === ''){
+      console.log(app.userInfo.StuName)
+      wx.showToast({
+        title: '你还未登录',
+        icon:'none',
+        duration:1000
+      })}else{
+        wx.navigateTo({
+      url: '../changepwd/changepwd',
+    })
+      }
+    
+  },
   loginself(){
     console.log(app.userInfo.StuName)
     if(app.userInfo.loginistrue === 1){
