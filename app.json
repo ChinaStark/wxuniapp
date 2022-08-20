@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/resg/resg",
-    "pages/Datachange/Datachange",
+     
     "pages/person/person",
     "pages/logs/logs",
     "pages/stu/stu",

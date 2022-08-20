@@ -38,10 +38,5 @@
 
   </view>
 
-   
-    <button  size="mini" ploin type="primary"   style="position: relative; left: -1rpx; top: 122rpx; width: 408rpx; height: 91rpx; display: inline-block; box-sizing: border-box">
-
-      <text class="id" bindtap="jump" >数据修改</text>
-  </button> 
-  
+     
 </view>
